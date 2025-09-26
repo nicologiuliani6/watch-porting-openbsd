@@ -45,7 +45,7 @@ int main(int argc, const char* argv[]){
 
         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
         if (!pipe) {
-            std::cerr << "Errore nell'aprire il comando!" << std::endl;
+            std::cerr << "Impossible to execute the command!" << std::endl;
             return 1;
         }
 
